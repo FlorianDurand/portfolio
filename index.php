@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-	
-    <meta charset="utf-8" />	 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Designer" />
-
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />	   
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link href="img/favicon.png" rel="shortcut icon" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
-	
-	<script src="js/modernizr.js"></script>
-
-	<title>Designer</title>
-
-	</head>
-	   <body>
-	   
+<?php get_header(); ?>   
 <!--- PAGE LOADING --->	
 <div class="preloading fadeIn">
 
@@ -139,7 +119,8 @@
 							  <div class="shw-cs"> Case study ( Coming soon ) </div>
 						</div>
 	                </div>
-                </div>				
+                </div>	
+                <?php get_footer(); ?>			
         <!--- THE END HERO HEADER WORK SLIDER --->		
 		
 		<!--- FOOTER --->
