@@ -8,4 +8,4 @@ Florian Durand ( [@Florian_Durand_](https://twitter.com/Florian_Durand_) /  / [f
 
 ### Usage
 
-Copy this theme to your theme folder.
+Copy this theme to your themes folder.
