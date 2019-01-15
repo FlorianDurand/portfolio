@@ -121,30 +121,4 @@
 	                </div>
                 </div>	
                 <?php get_footer(); ?>			
-        <!--- THE END HERO HEADER WORK SLIDER --->		
-		
-		<!--- FOOTER --->
-		<div class="container">
-	            <div class="row">
-                       <div class="footer-bg" >
-					      <div class="col-md-4 col-xs-12">
-						    <h1 div class="tfv"> Thanks for visiting. </h1>
-						    <a href="mailto:#0"> <div class="ftr-lnk"> Just say hello </div> </a>
-                            </div>	                      
-				       </div>
-				</div>
-		</div>		
-		<!--- THE END FOOTER --->			
         
-		<!--- SCRIPTS --->
-	            <script src="js/jquery-2.1.1.js"></script>
-                <script src="js/main.js"></script>
-				<script src="js/bootstrap.min.js"></script>				
-		<!--- THE END SCRIPTS --->	
-
-</div>
-<!--- THE PAGE LOADING --->		
-		
-		</body>		
-		
-</html>

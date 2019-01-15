@@ -340,8 +340,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	color: #161616;
-	text-align: center;
-	margin-top: 60px;
+	/* text-align: center; */
+	padding-left: 3%;
 }
 /*** THE END SERVICES WRT ***/
 
@@ -366,6 +366,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 	font-family: 'Roboto', sans-serif;
 	color: #161616;
 	padding-left: 1%;
+	margin-top:60px;
 }
 /*** THE END SINGLE WORK TITLE ***/
 

@@ -13,10 +13,10 @@ function add_styles_scripts() {
 	wp_register_script('bootstrap', JS_URL . '/bootstrap.min.js', array(), '1.0', true);
 	wp_enqueue_script('bootstrap');
 
-	wp_register_script('jquery', JS_URL . '/bjquery-3.3.1.js', array(), '1.0', true);
-	wp_enqueue_script('jquery');
+	wp_register_script('jquery3', JS_URL . '/jquery-3.3.1.js', array(), '1.0', true);
+	wp_enqueue_script('jquery3');
 
-	wp_register_script('modernizr', JS_URL . '/modernizr.js', array(), '1.0', true);
+	wp_register_script('modernizr', JS_URL . '/modernizr.js', array(), '1.0', false);
 	wp_enqueue_script('modernizr');
 
 	wp_register_script('main', JS_URL . '/main.js', array(), '1.0', true);
