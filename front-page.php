@@ -40,7 +40,7 @@ while( have_rows('about') ): the_row();
 <?php endwhile; ?>
 
 <?php endif; ?>
-       
+      
 <!--- THE END ABOUT CLIENT --->
 
 <!--- HERO HEADER WORK SLIDER --->
@@ -61,70 +61,30 @@ while( have_rows('social_networks') ): the_row();
 <?php endwhile; ?>
 
 <?php endif; ?>
-
-    <div class="row">
-            <div class="col-md-6 col-xs-12">
-                  <div class="prjct-bg" >					
-                <a target="blank" href="https://unsplash.com/photos/BP3XOsSPlGA"> <img src="img/covers/1.jpg" alt="" class="img-prjct-wrk"> </a>
-              <div class="prjct-wrt-left-wrk"> </div>
-          <div class="shw-cs2"> Project Title </div>
-          <div class="shw-cs4"> Branding, Identity </div>
-          <div class="shw-cs"> Case study ( Coming soon ) </div>
-      </div>					
-            </div>
+<div class="row">
+<?php $project = array(
+            'post_type' => 'project',
+         );
+         $the_query = new WP_Query( $project );
+         if($the_query -> have_posts())
+         {
+             while($the_query -> have_posts())
+            {
+                 $the_query -> the_post();
+                 ?> 
+                  <div class="col-md-6 col-xs-12">
+                    <div class="prjct-bg">
+                      <a target="blank" href="<?php the_field('project_link'); ?>"> <img src="<?php the_field('project_image'); ?>" alt="" class="img-prjct-wrk">
+                      </a>
+                      <div class="prjct-wrt-left-wrk"> </div>
+                      <div class="shw-cs2"><?php the_field('project_title'); ?> </div>
+                      <div class="shw-cs4"><?php the_field('project_description'); ?> </div>
+                      <div class="shw-cs"> <?php the_field('project_more'); ?></div>
+                    </div>
+                  </div>
     
-            <div class="col-md-6 col-xs-12">
-                  <div class="prjct-bg" >					
-                <a target="blank" href="https://unsplash.com/photos/i_6Y2V81ceA"> <img src="img/covers/2.jpg" alt="" class="img-prjct-wrk"> </a>
-              <div class="prjct-wrt-right-wrk"> </div>
-          <div class="shw-cs2"> Project Title </div>
-          <div class="shw-cs4"> Typography </div>
-          <div class="shw-cs"> Case study ( Coming soon ) </div>
-      </div>
-            </div>
-          </div>
-
-    <div class="row">
-            <div class="col-md-6 col-xs-12">
-                  <div class="prjct-bg" >					
-                <a target="blank" href="https://unsplash.com/photos/aX6MnM_xvXo"> <img src="img/covers/3.jpg" alt="" class="img-prjct-wrk"> </a>
-              <div class="prjct-wrt-left-wrk"> </div>
-          <div class="shw-cs2"> Project Title </div>
-          <div class="shw-cs4"> Illustration, Art Direction </div>
-          <div class="shw-cs"> Case study ( Coming soon ) </div>
-      </div>					
-            </div>
-    
-            <div class="col-md-6 col-xs-12">
-                  <div class="prjct-bg" >					
-                <a target="blank" href="https://unsplash.com/photos/qX9Ie7ieb1E"> <img src="img/covers/4.jpg" alt="" class="img-prjct-wrk"> </a>
-              <div class="prjct-wrt-right-wrk"> </div>
-          <div class="shw-cs2"> Project Title </div>
-          <div class="shw-cs4"> Street Art </div>
-          <div class="shw-cs"> Case study ( Coming soon ) </div>
-      </div>
-            </div>
-          </div>	
-
-    <div class="row">
-            <div class="col-md-6 col-xs-12">
-                  <div class="prjct-bg" >					
-                <a target="blank" href="https://unsplash.com/photos/5E5N49RWtbA"> <img src="img/covers/5.jpg" alt="" class="img-prjct-wrk"> </a>
-              <div class="prjct-wrt-left-wrk"> </div>
-          <div class="shw-cs2"> Project Title </div>
-          <div class="shw-cs4"> Art Direction </div>
-          <div class="shw-cs"> Case study ( Coming soon ) </div>
-      </div>					
-            </div>
-    
-            <div class="col-md-6 col-xs-12">
-                  <div class="prjct-bg" >					
-                <a target="blank" href="https://unsplash.com/photos/GCQaYDCQwgc"> <img src="img/covers/6.jpg" alt="" class="img-prjct-wrk"> </a>
-              <div class="prjct-wrt-right-wrk"> </div>
-          <div class="shw-cs2"> Project Title </div>
-          <div class="shw-cs4"> Branding, Web Design, App. Design </div>
-          <div class="shw-cs"> Case study ( Coming soon ) </div>
-      </div>
-            </div>
+                  <?php }}else{
+            echo "no result";}
+         ?>
           </div>	
 <?php get_footer(); ?>
