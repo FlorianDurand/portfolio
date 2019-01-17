@@ -53,7 +53,15 @@ while( have_rows('social_networks') ): the_row();
     <div class="lg-col-bg">
       <div class="lg-col-ttl2"><?php the_sub_field('title'); ?></div>
       <div class="lg-col-wrt2">
-        <?php the_sub_field('content'); ?>
+        <?php the_sub_field('content'); ?>&nbsp;&nbsp;&nbsp;
+        <?php 
+          $file = get_sub_field('resume');
+
+          if( $file ): ?>
+            
+            <a target="_blank" href="<?php echo $file['url']; ?>">Résumé</a>
+
+          <?php endif; ?>
       </div>
     </div>
   </div>
